@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <font-family xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Vazirmatn: Persian text -->
     <font android:font="@font/vazirmatn" android:fontStyle="normal" android:fontWeight="400"
         app:font="@font/vazirmatn" app:fontStyle="normal" app:fontWeight="400"/>
     <font android:font="@font/vazirmatn_black" android:fontStyle="normal" android:fontWeight="900"
         app:font="@font/vazirmatn_black" app:fontStyle="normal" app:fontWeight="900"/>
+    <!-- JetBrains Mono: numbers & prices -->
+    <font android:font="@font/jetbrains_mono" android:fontStyle="normal" android:fontWeight="500"
+        app:font="@font/jetbrains_mono" app:fontStyle="normal" app:fontWeight="500"/>
+    <font android:font="@font/jetbrains_mono_bold" android:fontStyle="normal" android:fontWeight="700"
+        app:font="@font/jetbrains_mono_bold" app:fontStyle="normal" app:fontWeight="700"/>
 </font-family>

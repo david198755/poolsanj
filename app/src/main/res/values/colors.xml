@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="bg">#0B1220</color>
-    <color name="card">#182234</color>
-    <color name="card_stroke">#24304A</color>
-    <color name="input">#111A2B</color>
-    <color name="text_primary">#E7EDF8</color>
-    <color name="text_secondary">#94A3B8</color>
-    <color name="accent">#FFC53D</color>
-    <color name="up">#FF5A5F</color>
-    <color name="down">#4ADE80</color>
+    <!-- Premium Persian Finance — Material 3 from Stitch -->
+    <color name="bg">#0d141b</color>
+    <color name="card">#1a2028</color>
+    <color name="card_border">#45474c</color>
+    <color name="card_surface">#161c24</color>
+    <color name="input">#1C283D</color>
+    <color name="input_focus">#f7be36</color>
 
-    <color name="nav_item">#8FA3C0</color>
+    <color name="text_primary">#dde3ee</color>
+    <color name="text_secondary">#c6c6cc</color>
+    <color name="text_muted">#909096</color>
+
+    <color name="accent">#f7be36</color>
+    <color name="accent_dim">#a07700</color>
+    <color name="accent_container">#1a1100</color>
+
+    <color name="up">#4ADE80</color>
+    <color name="down">#FF5A5F</color>
+
+    <color name="nav_bg">#1a2028CC</color>
+    <color name="nav_active">#f7be36</color>
+    <color name="nav_inactive">#909096</color>
+
+    <color name="splash_glow">#f7be36</color>
+    <color name="divider">#2f353e</color>
 </resources>

@@ -3,16 +3,23 @@
     <style name="Theme.PoolSanj" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:fontFamily">@font/vazirmatn</item>
         <item name="fontFamily">@font/vazirmatn</item>
+        <item name="android:monospaceFontFamily">@font/jetbrains_mono</item>
         <item name="colorPrimary">@color/accent</item>
         <item name="colorSecondary">@color/accent</item>
         <item name="android:windowBackground">@color/bg</item>
         <item name="android:statusBarColor">@color/bg</item>
-        <item name="android:navigationBarColor">@color/card</item>
+        <item name="android:navigationBarColor">@color/bg</item>
         <item name="bottomNavigationStyle">@style/BottomNav</item>
     </style>
 
+    <style name="Theme.PoolSanj.Splash" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:statusBarColor">@color/bg</item>
+        <item name="android:navigationBarColor">@color/bg</item>
+    </style>
+
     <style name="BottomNav" parent="Widget.MaterialComponents.BottomNavigationView">
-        <item name="android:background">@color/card</item>
+        <item name="android:background">@color/nav_bg</item>
     </style>
 
     <style name="FieldLabel">
@@ -31,10 +38,11 @@
         <item name="android:background">@drawable/bg_input</item>
         <item name="android:padding">13dp</item>
         <item name="android:textColor">@color/text_primary</item>
-        <item name="android:textColorHint">@color/text_secondary</item>
+        <item name="android:textColorHint">@color/text_muted</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:maxLines">1</item>
+        <item name="android:fontFamily">@font/jetbrains_mono</item>
     </style>
 
     <style name="WordsBox">
@@ -46,7 +54,7 @@
         <item name="android:minHeight">38dp</item>
         <item name="android:padding">9dp</item>
         <item name="android:text">@string/enter_amount</item>
-        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textColor">@color/text_muted</item>
         <item name="android:textSize">13sp</item>
     </style>
 </resources>

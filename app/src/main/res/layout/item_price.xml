@@ -21,8 +21,7 @@
         android:id="@+id/arrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingStart="6dp"
-        android:paddingEnd="6dp"
+        android:paddingHorizontal="6dp"
         android:textSize="13sp" />
 
     <TextView
@@ -31,8 +30,9 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
+        android:fontFamily="@font/jetbrains_mono_bold"
         android:textColor="@color/text_primary"
-        android:textSize="15sp"
+        android:textSize="14sp"
         android:textStyle="bold" />
 
     <TextView
@@ -41,6 +41,6 @@
         android:layout_height="wrap_content"
         android:minWidth="64dp"
         android:gravity="center"
-        android:textColor="@color/text_secondary"
+        android:fontFamily="@font/jetbrains_mono"
         android:textSize="12sp" />
 </LinearLayout>
