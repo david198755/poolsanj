@@ -3,7 +3,6 @@
     <style name="Theme.PoolSanj" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:fontFamily">@font/vazirmatn</item>
         <item name="fontFamily">@font/vazirmatn</item>
-        <item name="android:monospaceFontFamily">@font/jetbrains_mono</item>
         <item name="colorPrimary">@color/accent</item>
         <item name="colorSecondary">@color/accent</item>
         <item name="android:windowBackground">@color/bg</item>
