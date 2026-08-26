@@ -25,4 +25,5 @@
 
     <color name="splash_glow">#f7be36</color>
     <color name="divider">#2f353e</color>
+    <color name="nav_item">@color/nav_active</color>
 </resources>
