@@ -9,17 +9,13 @@ android {
 
     defaultConfig {
         applicationId = "id.artin.poolsanj"
-        minSdk = 24          // Android 7+ = covers nearly all Iranian phones
+        minSdk = 24
         targetSdk = 34
         versionCode = 6
         versionName = "2.1"
     }
 
-    }
-
     buildTypes {
-        debug {
-        }
         release {
             isMinifyEnabled = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"))
