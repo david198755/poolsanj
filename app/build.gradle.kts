@@ -3,12 +3,6 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
-val keystorePropertiesFile = rootProject.file("keystore.properties")
-val keystoreProperties = java.util.Properties()
-if (keystorePropertiesFile.exists()) {
-    java.io.FileInputStream(keystorePropertiesFile).use { keystoreProperties.load(it) }
-}
-
 android {
     namespace = "id.artin.poolsanj"
     compileSdk = 34
@@ -24,9 +18,9 @@ android {
     signingConfigs {
         create("debug") {
             storeFile = rootProject.file("debug.keystore")
-            storePassword = keystoreProperties.getProperty("storePassword", "android")
-            keyAlias = keystoreProperties.getProperty("keyAlias", "androiddebugkey")
-            keyPassword = keystoreProperties.getProperty("keyPassword", "android")
+            storePassword = providers.environmentVariable("KEYSTORE_PASS").getOrElse("android")
+            keyAlias = providers.environmentVariable("KEY_ALIAS").getOrElse("androiddebugkey")
+            keyPassword = providers.environmentVariable("KEYSTORE_PASS").getOrElse("android")
         }
     }
 

@@ -34,14 +34,7 @@ jobs:
         env:
           KEYSTORE_PASS: ${{ secrets.KEYSTORE_PASS }}
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-        run: |
-          cat > keystore.properties << EOF
-          storePassword=${KEYSTORE_PASS}
-          keyPassword=${KEYSTORE_PASS}
-          keyAlias=${KEY_ALIAS}
-          storeFile=debug.keystore
-          EOF
-          gradle assembleDebug --no-daemon
+        run: gradle assembleDebug --no-daemon
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
