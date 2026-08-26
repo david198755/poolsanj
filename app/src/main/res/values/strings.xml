@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">پول‌سنج</string>
+    <string name="loading">در حال دریافت…</string>
+    <string name="no_data">داده‌ای در دسترس نیست — اینترنت را بررسی کن</string>
+    <string name="enter_amount">وارد کنید</string>
+    <string name="rate_fmt">💲 دلار: %s تومان</string>
+    <string name="updated_fmt">بروزرسانی: %s • منبع: %s</string>
+    <string name="gold_updated_fmt">آخرین بروزرسانی نرخ طلا: %s</string>
+</resources>

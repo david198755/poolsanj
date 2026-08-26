@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_conv" android:icon="@android:drawable/ic_menu_manage"
+        android:title="مبدل" />
+    <item android:id="@+id/nav_summary" android:icon="@android:drawable/ic_menu_agenda"
+        android:title="خلاصه" />
+    <item android:id="@+id/nav_arz" android:icon="@android:drawable/ic_menu_compass"
+        android:title="ارز" />
+    <item android:id="@+id/nav_tala" android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="طلا و سکه" />
+    <item android:id="@+id/nav_crypto" android:icon="@android:drawable/ic_menu_view"
+        android:title="کریپتو" />
+</menu>

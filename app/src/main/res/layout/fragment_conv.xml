@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_conv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="💱 مبدل ارز و طلا"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dollar_rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_rate"
+                android:gravity="center"
+                android:padding="12dp"
+                android:textColor="@color/accent"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!-- رial -->
+            <TextView style="@style/FieldLabel" android:text="💰 ریال" />
+            <EditText android:id="@+id/rial" style="@style/MoneyField"
+                android:hint="مقدار ریال" android:inputType="number" />
+            <TextView android:id="@+id/rial_text" style="@style/WordsBox" />
+
+            <!-- Toman -->
+            <TextView style="@style/FieldLabel" android:text="💸 تومان" />
+            <EditText android:id="@+id/toman" style="@style/MoneyField"
+                android:hint="مقدار تومان" android:inputType="number" />
+            <TextView android:id="@+id/toman_text" style="@style/WordsBox" />
+
+            <!-- Dollar -->
+            <TextView style="@style/FieldLabel" android:text="🤑 دلار آمریکا" />
+            <EditText android:id="@+id/dollar" style="@style/MoneyField"
+                android:hint="مقدار دلار" android:inputType="numberDecimal" />
+            <TextView android:id="@+id/dollar_text" style="@style/WordsBox" />
+
+            <!-- Gold affordability -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="🏆 با این پول چی می‌تونم بخرم؟"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/gold_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical" />
+
+            <TextView
+                android:id="@+id/gold_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="14dp"
+                android:text="ساخته شده توسط عباس بیک مداح ✨"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
