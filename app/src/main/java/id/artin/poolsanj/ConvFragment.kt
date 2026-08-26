@@ -21,7 +21,7 @@ class ConvFragment : Fragment() {
         i.inflate(R.layout.fragment_conv, p, false)
 
     override fun onViewCreated(v: View, savedInstanceState: Bundle?) {
-        v.findViewById<TextView>(R.id.refresh_rate).setOnClickListener { loadRate(v) }
+        v.findViewById<TextView>(R.id.dollar_rate).setOnClickListener { loadRate(v) }
         loadRate(v)
         for (id in intArrayOf(R.id.rial, R.id.toman, R.id.dollar)) {
             v.findViewById<EditText>(id).addTextChangedListener(object : TextWatcher {

@@ -32,7 +32,7 @@ object Repo {
     }
 
     /** Server bundle (bot-prewarmed). */
-    private fun fromServer(): Map<String, Row>? = withContext(Dispatchers.IO) {
+    private suspend fun fromServer(): Map<String, Row>? = withContext(Dispatchers.IO) {
         val txt = httpGet(SERVER) ?: return@withContext null
         try {
             val root = JSONObject(txt)
