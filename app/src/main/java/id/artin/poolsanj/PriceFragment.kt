@@ -42,11 +42,11 @@ class PriceFragment : Fragment() {
     override fun onViewCreated(v: View, savedInstanceState: Bundle?) {
         val cat = requireArguments().getString("cat") ?: "summary"
         v.findViewById<TextView>(R.id.title).text = titles[cat] ?: ""
-        v.findViewById<SwipeRefreshLayout>(R.id.swipe).setOnRefreshListener { load(v, true) }
-        load(v, false)
+        v.findViewById<SwipeRefreshLayout>(R.id.swipe).setOnRefreshListener { load(v, cat, true) }
+        load(v, cat, false)
     }
 
-    private fun load(v: View, force: Boolean) {
+    private fun load(v: View, cat: String, force: Boolean) {
         val swipe = v.findViewById<SwipeRefreshLayout>(R.id.swipe)
         val box = v.findViewById<ViewGroup>(R.id.list)
         val status = v.findViewById<TextView>(R.id.status)
