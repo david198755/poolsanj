@@ -3,6 +3,11 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
+val keystorePropertiesFile = rootProject.file("keystore.properties")
+val keystoreProperties = java.util.Properties().apply {
+    if (keystorePropertiesFile.exists()) load(keystorePropertiesFile.inputStream())
+}
+
 android {
     namespace = "id.artin.poolsanj"
     compileSdk = 34
@@ -11,13 +16,26 @@ android {
         applicationId = "id.artin.poolsanj"
         minSdk = 24          // Android 7+ = covers nearly all Iranian phones
         targetSdk = 34
-        versionCode = 5
-        versionName = "2.0"
+        versionCode = 6
+        versionName = "2.1"
+    }
+
+    signingConfigs {
+        create("debug") {
+            storeFile = rootProject.file("debug.keystore")
+            storePassword = keystoreProperties.getProperty("storePassword", "android")
+            keyAlias = keystoreProperties.getProperty("keyAlias", "androiddebugkey")
+            keyPassword = keystoreProperties.getProperty("keyPassword", "android")
+        }
     }
 
     buildTypes {
+        debug {
+            signingConfig = signingConfigs.getByName("debug")
+        }
         release {
             isMinifyEnabled = true
+            signingConfig = signingConfigs.getByName("debug")
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"))
         }
     }
