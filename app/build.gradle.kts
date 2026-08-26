@@ -15,22 +15,13 @@ android {
         versionName = "2.1"
     }
 
-    signingConfigs {
-        create("debug") {
-            storeFile = rootProject.file("debug.keystore")
-            storePassword = providers.environmentVariable("KEYSTORE_PASS").getOrElse("android")
-            keyAlias = providers.environmentVariable("KEY_ALIAS").getOrElse("androiddebugkey")
-            keyPassword = providers.environmentVariable("KEYSTORE_PASS").getOrElse("android")
-        }
     }
 
     buildTypes {
         debug {
-            signingConfig = signingConfigs.getByName("debug")
         }
         release {
             isMinifyEnabled = true
-            signingConfig = signingConfigs.getByName("debug")
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"))
         }
     }
