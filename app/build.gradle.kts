@@ -3,10 +3,12 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
+import java.io.FileInputStream
+import java.util.Properties
+
 val keystorePropertiesFile = rootProject.file("keystore.properties")
-val keystoreProperties = java.util.Properties().apply {
-    if (keystorePropertiesFile.exists()) load(keystorePropertiesFile.inputStream())
-}
+val keystoreProperties = Properties()
+if (keystorePropertiesFile.exists()) FileInputStream(keystorePropertiesFile).use { keystoreProperties.load(it) }
 
 android {
     namespace = "id.artin.poolsanj"
