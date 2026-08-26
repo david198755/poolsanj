@@ -11,8 +11,8 @@ android {
         applicationId = "id.artin.poolsanj"
         minSdk = 24          // Android 7+ = covers nearly all Iranian phones
         targetSdk = 34
-        versionCode = 3
-        versionName = "1.2"
+        versionCode = 4
+        versionName = "1.3"
     }
 
     buildTypes {
