@@ -58,8 +58,8 @@
     </style>
 
     <style name="NavIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
-        <item name="android:color">@color/accent</item>
-        <item name="android:width">56dp</item>
+        <item name="android:color">#263D475B</item>
+        <item name="android:width">64dp</item>
         <item name="android:height">32dp</item>
     </style>
 </resources>
