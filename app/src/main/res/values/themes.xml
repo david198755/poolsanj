@@ -57,3 +57,9 @@
         <item name="android:textSize">13sp</item>
     </style>
 </resources>
+
+    <style name="NavIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/accent</item>
+        <item name="android:width">56dp</item>
+        <item name="android:height">32dp</item>
+    </style>
