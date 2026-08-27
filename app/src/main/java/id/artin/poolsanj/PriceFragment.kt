@@ -144,9 +144,9 @@ class PriceFragment : Fragment() {
         val swipe = view.findViewById<androidx.swiperefreshlayout.widget.SwipeRefreshLayout>(R.id.swipe)
 
         viewLifecycleOwner.lifecycleScope.launch {
-            val rows: List<Triple<String, String, PriceRepo.PriceInfo?>> = withContext(Dispatchers.IO) {
+            val rows: List<Triple<String, String, Repo.PriceInfo?>> = withContext(Dispatchers.IO) {
                 items.map { (slug, emoji, ticker) ->
-                    val info = PriceRepo.fetch(slug, force)
+                    val info = Repo.fetch(slug, force)
                     Triple(emoji, ticker, info)
                 }
             }
