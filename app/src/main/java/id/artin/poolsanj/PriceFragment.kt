@@ -4,7 +4,9 @@ import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import android.widget.ProgressBar
+import android.view.View
+import android.widget.ProgressBarGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -25,7 +27,7 @@ class PriceFragment : Fragment() {
 
     private val CATALOG = mapOf(
         "summary" to listOf(
-            "price_dollar_rl", "price_eur", "sekee", "bahar_azadi",
+            "price_dollar_rl", "price_eur", "sekee", "sekeb",
             "geram18", "mesghal", "ons",
             "crypto-bitcoin", "crypto-tether", "crypto-ethereum"
         ),
@@ -45,7 +47,7 @@ class PriceFragment : Fragment() {
             "price_amd", "price_gel"
         ),
         "tala" to listOf(
-            "geram18", "mesghal", "ons", "sekee", "bahar_azadi",
+            "geram18", "mesghal", "ons", "sekee", "sekeb",
             "nim", "rob", "geram24", "melting_gold", "melting_geram18",
             "sekeb", "sekebaha"
         ),
@@ -77,7 +79,7 @@ class PriceFragment : Fragment() {
         "price_npr" to "🇳🇵", "price_lkr" to "🇱🇰", "price_bdt" to "🇧🇩",
         "price_mnt" to "🇲🇳", "price_geg" to "🇬🇪", "price_azn" to "🇦🇿",
         "price_amd" to "🇦🇲", "price_gel" to "🇬🇪",
-        "sekee" to "🪙", "bahar_azadi" to "🪙", "geram18" to "✨",
+        "sekee" to "🪙", "sekeb" to "🪙", "geram18" to "✨",
         "mesghal" to "⚖️", "ons" to "🌍", "nim" to "🪙", "rob" to "🪙",
         "geram24" to "✨", "melting_gold" to "🔶", "melting_geram18" to "🔶",
         "sekeb" to "🪙", "sekebaha" to "🪙",
@@ -114,10 +116,13 @@ class PriceFragment : Fragment() {
     private fun load(view: View, slugs: List<String>) {
         val container = view.findViewById<LinearLayout>(R.id.list)
         val swipe = view.findViewById<androidx.swiperefreshlayout.widget.SwipeRefreshLayout>(R.id.swipe)
+        val loading = view.findViewById<ProgressBar>(R.id.loading)
 
         viewLifecycleOwner.lifecycleScope.launch {
-            val rows = withContext(Dispatchers.IO) { Repo.rowsFor(slugs) }
+            loading.visibility = View.VISIBLE
             container.removeAllViews()
+            val rows = withContext(Dispatchers.IO) { Repo.rowsFor(slugs) }
+            loading.visibility = View.GONE
             val ctx = requireContext()
             for (row in rows) {
                 val v = LayoutInflater.from(ctx).inflate(R.layout.item_price, container, false)

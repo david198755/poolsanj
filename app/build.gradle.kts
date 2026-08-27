@@ -11,8 +11,8 @@ android {
         applicationId = "id.artin.poolsanj"
         minSdk = 24
         targetSdk = 34
-        versionCode = 16
-        versionName = "3.6"
+        versionCode = 17
+        versionName = "3.7"
     }
 
     buildTypes {
