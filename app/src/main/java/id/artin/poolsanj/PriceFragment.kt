@@ -2,6 +2,7 @@ package id.artin.poolsanj
 
 import android.graphics.Color
 import android.os.Bundle
+import androidx.core.os.bundleOf
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -143,7 +144,7 @@ class PriceFragment : Fragment() {
         val swipe = view.findViewById<androidx.swiperefreshlayout.widget.SwipeRefreshLayout>(R.id.swipe)
 
         viewLifecycleOwner.lifecycleScope.launch {
-            val rows = withContext(Dispatchers.IO) {
+            val rows: List<Triple<String, String, PriceRepo.PriceInfo?>> = withContext(Dispatchers.IO) {
                 items.map { (slug, emoji, ticker) ->
                     val info = PriceRepo.fetch(slug, force)
                     Triple(emoji, ticker, info)

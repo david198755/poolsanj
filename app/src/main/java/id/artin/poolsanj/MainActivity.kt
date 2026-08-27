@@ -11,8 +11,8 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val nav = findViewById<BottomNavigationView>(R.id.nav)
-        nav.setOnNavigationItemSelectedListener(this)
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav)
+        bottomNav.setOnNavigationItemSelectedListener(this)
         if (savedInstanceState == null) show(PriceFragment.newInstance("summary"))
     }
 
@@ -20,11 +20,11 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         supportFragmentManager.beginTransaction().replace(R.id.fragment_container, f).commit()
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean = when (item.itemId) {
-        R.id.nav_conv -> { show(ConvFragment()); true }
-        R.id.nav_summary -> { show(PriceFragment.newInstance("summary")); true }
-        R.id.nav_arz -> { show(PriceFragment.newInstance("arz")); true }
-        R.id.nav_tala -> { show(PriceFragment.newInstance("tala")); true }
-        R.id.nav_crypto -> { show(PriceFragment.newInstance("crypto")); true }
+        R.id.bottom_nav_conv -> { show(ConvFragment()); true }
+        R.id.bottom_nav_summary -> { show(PriceFragment.newInstance("summary")); true }
+        R.id.bottom_nav_arz -> { show(PriceFragment.newInstance("arz")); true }
+        R.id.bottom_nav_tala -> { show(PriceFragment.newInstance("tala")); true }
+        R.id.bottom_nav_crypto -> { show(PriceFragment.newInstance("crypto")); true }
         else -> false
     }
 }
