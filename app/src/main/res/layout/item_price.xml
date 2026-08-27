@@ -4,7 +4,6 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="8dp">
 
-    <!-- Glass panel background -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,7 +13,6 @@
         android:paddingHorizontal="14dp"
         android:paddingVertical="14dp">
 
-        <!-- Right side: emoji + name + ticker -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -52,18 +50,17 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Left side: price + pct + chevron -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="end"
-            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="end">
+                android:gravity="end"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/price"
@@ -78,6 +75,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:paddingHorizontal="6dp"
                     android:paddingVertical="2dp">
