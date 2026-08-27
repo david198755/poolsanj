@@ -49,18 +49,147 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <!-- Bottom Nav -->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <!-- Custom Bottom Nav - matches Stitch exactly -->
+    <LinearLayout
         android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
-        android:layout_height="68dp"
+        android:layout_height="64dp"
         android:background="#CC1A2028"
-        app:elevation="8dp"
-        app:itemIconTint="@color/nav_colors"
-        app:itemTextColor="@color/nav_colors"
-        app:itemIconSize="24dp"
-        app:labelVisibilityMode="labeled"
-        app:itemActiveIndicatorStyle="@style/NavIndicator"
-        app:menu="@menu/bottom_nav"
-        android:paddingTop="4dp" />
+        android:elevation="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp">
+
+        <!-- مبدل -->
+        <LinearLayout
+            android:id="@+id/nav_conv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="6dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_nav_item">
+            <ImageView
+                android:id="@+id/icon_conv"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_nav_converter" />
+            <TextView
+                android:id="@+id/text_conv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="مبدل"
+                android:textSize="11sp"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <!-- بازار (active) -->
+        <LinearLayout
+            android:id="@+id/nav_summary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="6dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_nav_item_active">
+            <ImageView
+                android:id="@+id/icon_summary"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_nav_market" />
+            <TextView
+                android:id="@+id/text_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="بازار"
+                android:textSize="11sp"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <!-- ارز -->
+        <LinearLayout
+            android:id="@+id/nav_arz"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="6dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_nav_item">
+            <ImageView
+                android:id="@+id/icon_arz"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_nav_currency" />
+            <TextView
+                android:id="@+id/text_arz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ارز"
+                android:textSize="11sp"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <!-- طلا -->
+        <LinearLayout
+            android:id="@+id/nav_tala"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="6dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_nav_item">
+            <ImageView
+                android:id="@+id/icon_tala"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_nav_gold" />
+            <TextView
+                android:id="@+id/text_tala"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="طلا"
+                android:textSize="11sp"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <!-- کریپتو -->
+        <LinearLayout
+            android:id="@+id/nav_crypto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="6dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_nav_item">
+            <ImageView
+                android:id="@+id/icon_crypto"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_nav_crypto" />
+            <TextView
+                android:id="@+id/text_crypto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="کریپتو"
+                android:textSize="11sp"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>
