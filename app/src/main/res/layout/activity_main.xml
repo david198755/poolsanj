@@ -37,6 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/jetbrains_mono"
+            android:text="آخرین بروزرسانی"
             android:textColor="#C6C6CC"
             android:textSize="12sp" />
     </LinearLayout>

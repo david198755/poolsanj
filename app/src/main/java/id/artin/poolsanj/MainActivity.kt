@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     private val timeUpdater = object : Runnable {
         override fun run() {
             val tv = findViewById<TextView>(R.id.header_time)
-            tv?.text = "${timeFormat.format(Date())} · tgju"
+            tv?.text = "آخرین بروزرسانی: ${timeFormat.format(Date())}"
             handler.postDelayed(this, 30000)
         }
     }

@@ -93,10 +93,18 @@ class PriceFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_prices, container, false)
     }
 
+    private val TITLES = mapOf(
+        "summary" to "خلاصه بازار",
+        "arz" to "ارز",
+        "tala" to "طلا و سکه",
+        "crypto" to "کریپتو"
+    )
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val cat = requireArguments().getString("cat") ?: "summary"
         val slugs = CATALOG[cat] ?: CATALOG["summary"]!!
+        view.findViewById<TextView>(R.id.title).text = TITLES[cat] ?: "خلاصه بازار"
         load(view, slugs)
 
         val swipe = view.findViewById<androidx.swiperefreshlayout.widget.SwipeRefreshLayout>(R.id.swipe)
