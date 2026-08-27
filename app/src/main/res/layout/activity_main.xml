@@ -61,5 +61,6 @@
         app:itemIconSize="24dp"
         app:labelVisibilityMode="labeled"
         app:itemActiveIndicatorStyle="@style/NavIndicator"
-        app:menu="@menu/bottom_nav" />
+        app:menu="@menu/bottom_nav"
+        android:paddingTop="4dp" />
 </LinearLayout>
