@@ -13,26 +13,71 @@
         android:paddingHorizontal="14dp"
         android:paddingVertical="14dp">
 
-        <!-- Right: emoji + name + ticker (like Stitch) -->
+        <!-- Right side: price + pct (v3.3 style) -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="start">
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jetbrains_mono_bold"
+                android:textColor="#DDE3EE"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/pct_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="2dp">
+
+                <ImageView
+                    android:id="@+id/arrow_icon"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp" />
+
+                <TextView
+                    android:id="@+id/pct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/jetbrains_mono"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Left side: emoji + name + ticker (v3.3 style) -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_chevron" />
 
             <TextView
                 android:id="@+id/emoji"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginEnd="4dp"
                 android:textSize="22sp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:gravity="end">
 
                 <TextView
                     android:id="@+id/name"
@@ -49,58 +94,6 @@
                     android:textColor="#C6C6CC"
                     android:textSize="11sp" />
             </LinearLayout>
-        </LinearLayout>
-
-        <!-- Left: price + pct + chevron (like Stitch) -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="end">
-
-                <TextView
-                    android:id="@+id/price"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/jetbrains_mono_bold"
-                    android:textColor="#DDE3EE"
-                    android:textSize="14sp" />
-
-                <LinearLayout
-                    android:id="@+id/pct_container"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="6dp"
-                    android:paddingVertical="2dp">
-
-                    <ImageView
-                        android:id="@+id/arrow_icon"
-                        android:layout_width="14dp"
-                        android:layout_height="14dp" />
-
-                    <TextView
-                        android:id="@+id/pct"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/jetbrains_mono"
-                        android:textSize="12sp" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="6dp"
-                android:src="@drawable/ic_chevron" />
         </LinearLayout>
     </LinearLayout>
 </FrameLayout>
