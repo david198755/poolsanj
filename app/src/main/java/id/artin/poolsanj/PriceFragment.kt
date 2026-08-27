@@ -18,6 +18,11 @@ import java.util.Date
 import java.util.Locale
 
 class PriceFragment : Fragment() {
+    companion object {
+        fun newInstance(cat: String) = PriceFragment().apply {
+            arguments = bundleOf("cat" to cat)
+        }
+    }
 
     private val CATALOG = mapOf(
         "summary" to listOf(
@@ -134,7 +139,7 @@ class PriceFragment : Fragment() {
 
     private fun load(view: View, cat: String, force: Boolean) {
         val items = CATALOG[cat] ?: CATALOG["summary"]!!
-        val container = view.findViewById<LinearLayout>(R.id.list_container)
+        val container = view.findViewById<LinearLayout>(R.id.list)
         val swipe = view.findViewById<androidx.swiperefreshlayout.widget.SwipeRefreshLayout>(R.id.swipe)
 
         viewLifecycleOwner.lifecycleScope.launch {

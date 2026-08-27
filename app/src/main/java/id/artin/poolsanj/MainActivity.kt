@@ -17,13 +17,13 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     }
 
     private fun show(f: Fragment) =
-        supportFragmentManager.beginTransaction().replace(R.id.container, f).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_container, f).commit()
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean = when (item.itemId) {
         R.id.nav_conv -> { show(ConvFragment()); true }
         R.id.nav_summary -> { show(PriceFragment.newInstance("summary")); true }
         R.id.nav_arz -> { show(PriceFragment.newInstance("arz")); true }
-        R.id.nav_tala -> { show(PriceFragment.newInstance("gold_coin")); true }
+        R.id.nav_tala -> { show(PriceFragment.newInstance("tala")); true }
         R.id.nav_crypto -> { show(PriceFragment.newInstance("crypto")); true }
         else -> false
     }
